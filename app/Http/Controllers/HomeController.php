@@ -12,8 +12,5 @@ class HomeController extends Controller
     }
 
 
-    public function login(Request $request){
-       // $request->session()->put('is_logged_in','aasdfsadfsadf');
-        return $request->session()->has('is_logged_in') ? view('welcome') :view('auths.login');
-    }
+
 }

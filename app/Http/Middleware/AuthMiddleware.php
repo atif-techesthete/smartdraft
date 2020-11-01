@@ -16,7 +16,6 @@ class AuthMiddleware
      * @return mixed
      */
     public function handle(Request $request, Closure $next){
-        
-        return !$request->session()->has('is_logged_in') ? redirect()->route('auth.login'): $next($request);
+        return !$request->session()->has('is_logged_in') ? redirect()->route('auth.login'): ($next)($request);
     }
 }
