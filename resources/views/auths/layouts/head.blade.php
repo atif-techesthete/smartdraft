@@ -22,9 +22,11 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+@yield('custom-scripts')
 <meta name="csrf-token" value="{{ csrf_token() }}" />
 <style>
     .links > a{
         margin: 10px;
+        text-decoration: none;
     }
 </style>
